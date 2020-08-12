@@ -20,6 +20,10 @@
     }
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/river-live/client-js"
+  },
   "dependencies": {
     "socket.io-client": "^2.3.0"
   }
