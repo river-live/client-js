@@ -2,7 +2,7 @@
   "name": "river-client-js",
   "version": "0.1.0",
   "description": "JavaScript client for the browser",
-  "main": "index.js",
+  "main": "./lib/river.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,8 @@
       "name": "William Jackson"
     }
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "socket.io-client": "^2.3.0"
+  }
 }
