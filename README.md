@@ -15,6 +15,7 @@ const River = require("river-client-js");
 
 const river = new River({
   host: "localhost", // River server endpoint
+  jwt: "your JWT", // the token should be signed using the secret you received when deploying River
 });
 ```
 
