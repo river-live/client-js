@@ -1,6 +1,6 @@
 {
   "name": "river-client-js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "JavaScript client for the browser",
   "main": "./lib/river.js",
   "scripts": {
