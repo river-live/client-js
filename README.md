@@ -2,9 +2,13 @@
 
 ## Installation
 
+To use in webpack-like build environments:
+
 ```
 npm install river-client-js
 ```
+
+To download a stand-alone browser script, see the `dist` folder.
 
 ## Initialization
 
@@ -40,11 +44,11 @@ river.unsubscribe("my-channel");
 ## Receiving messages
 
 ```javascript
-river.on("eventName", (data) => {
+river.on("eventName", (payload) => {
   // do something
 })
 
-// data payload example
+// payload example
 {
   channel: 'my-channel',
   data: data
