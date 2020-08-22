@@ -39,7 +39,7 @@ Any browser client trying to connect to River via WebSocket will receive a conne
 
 ## Usage
 
-### Subsribe
+### Subscribe
 
 Receive messages on channel `my-channel`:
 
@@ -69,6 +69,6 @@ river.on("eventName", (payload) => {
 }
 ```
 
-The callback function given to the `.on` method (as the second argument) is executed everytime a message is received with a matching `eventName`, on a channel to which the client is subscribed.
+The callback function given to the `.on` method (as the second argument) is executed every time a message is received with a matching `eventName`, on a channel to which the client is subscribed.
 
 `"my-channel"`, `"eventName"`, and `data` correspond to the `channel`, `eventName`, and `data` given when the event is published to River. Please see the [`http-node`](https://github.com/river-live/http-node) repo for more information.
