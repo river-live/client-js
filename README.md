@@ -47,6 +47,8 @@ Receive messages on channel `my-channel`:
 river.subscribe("my-channel");
 ```
 
+Returns a `Channel` object, to which events can be bound.
+
 ### Unsubscribe
 
 Stop receiving messages on channel `my-channel`:
@@ -58,17 +60,15 @@ river.unsubscribe("my-channel");
 ### Receiving messages
 
 ```javascript
-river.on("eventName", (payload) => {
-  // do something
-})
+// subscribe first
+const myChannel = river.subscribe("my-channel");
 
-// payload example
-{
-  channel: "my-channel",
-  data: data
-}
+// bind event to channel
+myChannel.bind("eventName", (data) => {
+  // do something
+});
 ```
 
-The callback function given to the `.on` method (as the second argument) is executed every time a message is received with a matching `eventName`, on a channel to which the client is subscribed.
+The callback function given to the `.bind` method (as the second argument) is executed every time a message is received on that channel with a matching `eventName`.
 
 `"my-channel"`, `"eventName"`, and `data` correspond to the `channel`, `eventName`, and `data` given when the event is published to River. Please see the [`http-node`](https://github.com/river-live/http-node) repo for more information.
